@@ -42,7 +42,7 @@ export default function DashboardPage() {
 				}
 				
 				// Try to fetch from backend
-				const base = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:8000";
+				const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
 				const res = await fetch(`${base}/api/accounts/me/`, {
 					headers: { Authorization: `Bearer ${token}` },
 				});

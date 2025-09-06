@@ -152,7 +152,7 @@ class SecurityManager {
 
     // In production, send to backend
     try {
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:8000";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "https://prowebnigeria.pythonanywhere.com";
       await fetch(`${base}/api/security/log/`, {
         method: 'POST',
         headers: {

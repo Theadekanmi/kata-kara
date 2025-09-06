@@ -87,7 +87,7 @@ export function ChatSystem({ currentUserId, currentUserName, projectId, recipien
   const fetchChatRooms = async () => {
     try {
       const access = localStorage.getItem("access_token");
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:8000";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
       
       const response = await fetch(`${base}/api/chat/rooms/`, {
         headers: {
@@ -132,7 +132,7 @@ export function ChatSystem({ currentUserId, currentUserName, projectId, recipien
   const initializeWebSocket = () => {
     try {
       // In production, use wss:// and proper WebSocket endpoint
-      const wsUrl = `ws://127.0.0.1:8000/ws/chat/${currentUserId}/`;
+      const wsUrl = `ws://prowebnigeria.pythonanywhere.com/ws/chat/${currentUserId}/`;
       wsRef.current = new WebSocket(wsUrl);
 
       wsRef.current.onopen = () => {
@@ -219,7 +219,7 @@ export function ChatSystem({ currentUserId, currentUserName, projectId, recipien
     // Create new room
     try {
       const access = localStorage.getItem("access_token");
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:8000";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
       
       const response = await fetch(`${base}/api/chat/rooms/`, {
         method: 'POST',
@@ -261,7 +261,7 @@ export function ChatSystem({ currentUserId, currentUserName, projectId, recipien
   const loadMessages = async (roomId: string) => {
     try {
       const access = localStorage.getItem("access_token");
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:8000";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
       
       const response = await fetch(`${base}/api/chat/rooms/${roomId}/messages/`, {
         headers: {
@@ -322,7 +322,7 @@ export function ChatSystem({ currentUserId, currentUserName, projectId, recipien
       // Fallback to HTTP request
       try {
         const access = localStorage.getItem("access_token");
-        const base = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:8000";
+        const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
         
         await fetch(`${base}/api/chat/messages/`, {
           method: 'POST',

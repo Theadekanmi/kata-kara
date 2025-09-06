@@ -44,7 +44,7 @@ export default function AdminPage() {
   const fetchAdminStats = async () => {
     try {
       const access = localStorage.getItem("access_token");
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:8000";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
       
       const response = await fetch(`${base}/api/admin/stats/`, {
         headers: {

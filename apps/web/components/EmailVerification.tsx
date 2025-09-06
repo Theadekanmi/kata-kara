@@ -26,7 +26,7 @@ export function EmailVerification({ email, onVerified }: EmailVerificationProps)
     setError("");
 
     try {
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:8000";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
       const response = await fetch(`${base}/api/auth/verify-email/`, {
         method: "POST",
         headers: {
@@ -60,7 +60,7 @@ export function EmailVerification({ email, onVerified }: EmailVerificationProps)
     setError("");
 
     try {
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://127.0.0.1:8000";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
       const response = await fetch(`${base}/api/auth/resend-verification/`, {
         method: "POST",
         headers: {
