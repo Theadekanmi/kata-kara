@@ -1,0 +1,9 @@
+{
+  "name": "kata-kara-marketplace",
+  "version": 2,
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": "nextjs",
+  "regions": ["iad1"]
+}
+
