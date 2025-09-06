@@ -114,7 +114,7 @@ export default function NewJobPage() {
     setError("");
 
     try {
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "https://prowebnigeria.pythonanywhere.com";
       const access = typeof window !== "undefined" ? localStorage.getItem("access_token") : null;
       
       if (!access) {

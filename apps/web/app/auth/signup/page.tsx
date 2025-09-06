@@ -74,7 +74,7 @@ export default function SignupPage() {
     setError("");
 
     try {
-      const response = await fetch("http://prowebnigeria.pythonanywhere.com/api/accounts/register/", {
+      const response = await fetch("https://prowebnigeria.pythonanywhere.com/api/accounts/register/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

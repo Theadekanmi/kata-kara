@@ -87,7 +87,7 @@ export function ChatSystem({ currentUserId, currentUserName, projectId, recipien
   const fetchChatRooms = async () => {
     try {
       const access = localStorage.getItem("access_token");
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "https://prowebnigeria.pythonanywhere.com";
       
       const response = await fetch(`${base}/api/chat/rooms/`, {
         headers: {
@@ -219,7 +219,7 @@ export function ChatSystem({ currentUserId, currentUserName, projectId, recipien
     // Create new room
     try {
       const access = localStorage.getItem("access_token");
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "https://prowebnigeria.pythonanywhere.com";
       
       const response = await fetch(`${base}/api/chat/rooms/`, {
         method: 'POST',
@@ -261,7 +261,7 @@ export function ChatSystem({ currentUserId, currentUserName, projectId, recipien
   const loadMessages = async (roomId: string) => {
     try {
       const access = localStorage.getItem("access_token");
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "https://prowebnigeria.pythonanywhere.com";
       
       const response = await fetch(`${base}/api/chat/rooms/${roomId}/messages/`, {
         headers: {
@@ -322,7 +322,7 @@ export function ChatSystem({ currentUserId, currentUserName, projectId, recipien
       // Fallback to HTTP request
       try {
         const access = localStorage.getItem("access_token");
-        const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
+        const base = process.env.NEXT_PUBLIC_API_BASE || "https://prowebnigeria.pythonanywhere.com";
         
         await fetch(`${base}/api/chat/messages/`, {
           method: 'POST',

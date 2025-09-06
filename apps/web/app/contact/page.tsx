@@ -18,7 +18,7 @@ export default function ContactPage() {
     setLoading(true);
     
     try {
-      const base = process.env.NEXT_PUBLIC_API_BASE || "http://prowebnigeria.pythonanywhere.com";
+      const base = process.env.NEXT_PUBLIC_API_BASE || "https://prowebnigeria.pythonanywhere.com";
       const response = await fetch(`${base}/api/contact/`, {
         method: "POST",
         headers: {
