@@ -76,7 +76,20 @@ export default async function JobsPage({ searchParams }: { searchParams?: Promis
 				<div className="grid gap-8 lg:grid-cols-4">
 					{/* Enhanced Filters Sidebar */}
 					<div className="lg:col-span-1">
-						<div className="bg-white rounded-xl shadow-sm p-6 sticky top-8 border border-gray-100">
+						{/* Mobile Filter Toggle */}
+						<div className="lg:hidden mb-6">
+							<button className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 flex items-center justify-between text-gray-700 hover:bg-gray-50 transition-colors">
+								<span className="flex items-center font-medium">
+									<span className="mr-2">🔍</span>
+									Filters
+								</span>
+								<svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+								</svg>
+							</button>
+						</div>
+						
+						<div className="hidden lg:block bg-white rounded-xl shadow-sm p-6 sticky top-8 border border-gray-100">
 							<h3 className="text-xl font-semibold text-gray-900 mb-6 flex items-center">
 								<span className="mr-2">🔍</span>
 								Filter Jobs
@@ -123,12 +136,12 @@ export default async function JobsPage({ searchParams }: { searchParams?: Promis
 
 					{/* Jobs Grid with Enhanced Header */}
 					<div className="lg:col-span-3">
-						<div className="mb-6 flex items-center justify-between">
-							<h2 className="text-2xl font-bold text-gray-900">
+						<div className="mb-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+							<h2 className="text-xl sm:text-2xl font-bold text-gray-900">
 								{jobs.length} Jobs Found
 							</h2>
 							<select 
-								className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-white"
+								className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-green-500 bg-white min-w-0 sm:min-w-[180px]"
 								title="Sort jobs by"
 								aria-label="Sort jobs by"
 							>

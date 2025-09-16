@@ -109,19 +109,19 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative z-10 container-max">
           <div className="max-w-2xl">
-            <h1 className="text-6xl font-bold tracking-tight text-white sm:text-7xl">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
               How work gets{" "}
               <span className="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">
                 done
               </span>
             </h1>
-            <p className="mt-6 text-xl leading-8 text-gray-200">
+            <p className="mt-6 text-lg sm:text-xl leading-7 sm:leading-8 text-gray-200">
               KataKara is the world's work marketplace that connects businesses with independent talent from across the globe.
             </p>
             
             {/* Enhanced Search Bar */}
             <div className="mt-10">
-              <div className="flex rounded-lg shadow-2xl overflow-hidden bg-white">
+              <div className="flex flex-col sm:flex-row rounded-lg shadow-2xl overflow-hidden bg-white">
                 <div className="relative flex flex-grow items-stretch focus-within:z-10">
                   <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                     <svg className="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
@@ -131,12 +131,12 @@ export default function HomePage() {
                   <input
                     type="text"
                     placeholder="Search for any service..."
-                    className="block w-full pl-12 pr-4 py-5 text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-0 border-0 text-lg"
+                    className="block w-full pl-12 pr-4 py-4 sm:py-5 text-gray-900 placeholder:text-gray-500 focus:outline-none focus:ring-0 border-0 text-base sm:text-lg"
                   />
                 </div>
                 <button
                   type="button"
-                  className="relative px-8 py-5 text-lg font-semibold text-white bg-green-600 hover:bg-green-500 transition-colors"
+                  className="relative px-6 sm:px-8 py-4 sm:py-5 text-base sm:text-lg font-semibold text-white bg-green-600 hover:bg-green-500 transition-colors"
                 >
                   Search
                 </button>
@@ -291,10 +291,10 @@ export default function HomePage() {
               Join millions of entrepreneurs who use KataKara to turn their ideas into reality.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/auth/signup" className="bg-white text-green-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              <Link href="/auth/signup" className="bg-white text-green-600 hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors text-center">
                 Get Started
               </Link>
-              <Link href="/jobs" className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              <Link href="/jobs" className="border-2 border-white text-white hover:bg-white hover:text-green-600 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors text-center">
                 Browse Jobs
               </Link>
             </div>

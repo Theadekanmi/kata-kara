@@ -123,9 +123,9 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex flex-col lg:flex-row">
       {/* Left Side - Form */}
-      <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-20 xl:px-24">
+      <div className="flex-1 flex flex-col justify-center py-8 lg:py-12 px-4 sm:px-6 lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div>
             <Link href="/" className="flex items-center">
@@ -314,8 +314,8 @@ export default function LoginPage() {
       </div>
 
       {/* Right Side - Image */}
-      <div className="hidden md:block relative w-0 flex-1 max-w-md lg:max-w-lg">
-        <div className="h-screen max-h-[80vh] relative overflow-hidden rounded-l-2xl">
+      <div className="hidden lg:block relative w-0 flex-1 max-w-md lg:max-w-lg">
+        <div className="h-full min-h-[400px] lg:h-screen lg:max-h-[80vh] relative overflow-hidden rounded-l-2xl">
           <Image
             className="absolute inset-0 h-full w-full object-cover"
             src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=800&auto=format&fit=crop"
@@ -324,10 +324,10 @@ export default function LoginPage() {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-br from-green-600/30 to-blue-600/30"></div>
-          <div className="absolute inset-0 flex items-center justify-center p-8">
+          <div className="absolute inset-0 flex items-center justify-center p-6 lg:p-8">
             <div className="text-center text-white">
-              <h3 className="text-2xl lg:text-3xl font-bold mb-4">Join the world's work marketplace</h3>
-              <p className="text-base lg:text-lg opacity-90">Connect with millions of businesses and freelancers worldwide</p>
+              <h3 className="text-xl lg:text-2xl xl:text-3xl font-bold mb-3 lg:mb-4">Join the world's work marketplace</h3>
+              <p className="text-sm lg:text-base xl:text-lg opacity-90">Connect with millions of businesses and freelancers worldwide</p>
             </div>
           </div>
         </div>

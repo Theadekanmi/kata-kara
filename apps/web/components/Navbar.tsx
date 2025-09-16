@@ -174,7 +174,7 @@ export function Navbar() {
 									<div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white text-sm font-medium">
 										{user.first_name?.[0] || user.email?.[0] || 'U'}
 									</div>
-									<span className="hidden sm:block text-sm font-medium text-gray-700">
+									<span className="hidden md:block text-sm font-medium text-gray-700">
 										{user.first_name || user.email?.split('@')[0] || 'User'}
 									</span>
 									<svg className="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -228,7 +228,7 @@ export function Navbar() {
 							<>
 								<Link
 									href="/auth/login"
-									className="hidden sm:block text-sm font-medium text-gray-700 hover:text-gray-900 px-3 py-2"
+									className="hidden md:block text-sm font-medium text-gray-700 hover:text-gray-900 px-3 py-2"
 								>
 									Log In
 								</Link>
@@ -247,7 +247,11 @@ export function Navbar() {
 							className="lg:hidden p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100"
 						>
 							<svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-								<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+								{isMenuOpen ? (
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+								) : (
+									<path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+								)}
 							</svg>
 						</button>
 					</div>

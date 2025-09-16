@@ -149,8 +149,8 @@ export function Footer() {
 			{/* Bottom Bar */}
 			<div className="border-t border-gray-800">
 				<div className="container-max">
-					<div className="py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-400">
-						<div className="flex items-center space-x-4 mb-4 sm:mb-0">
+					<div className="py-6 flex flex-col sm:flex-row items-center justify-between text-sm text-gray-400 gap-4">
+						<div className="flex flex-col sm:flex-row items-center space-y-2 sm:space-y-0 sm:space-x-4 text-center sm:text-left">
 							<p>© {new Date().getFullYear()} KataKara. All rights reserved.</p>
 							<span className="hidden sm:block">•</span>
 							<p className="text-xs">

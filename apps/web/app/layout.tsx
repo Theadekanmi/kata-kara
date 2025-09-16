@@ -78,6 +78,84 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://images.unsplash.com" />
         <meta name="theme-color" content="#16a34a" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+        
+        {/* Organization Schema for Google Knowledge Panel */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "KataKara",
+              "alternateName": "KataKara Freelance Marketplace",
+              "description": "The world's leading freelance marketplace connecting businesses with independent talent from across the globe. Find top-rated freelancers for web development, design, writing, and digital services.",
+              "url": "https://kata-kara.vercel.app",
+              "logo": "https://kata-kara.vercel.app/logo.png",
+              "image": "https://kata-kara.vercel.app/og-image.jpg",
+              "foundingDate": "2024",
+              "founder": {
+                "@type": "Person",
+                "name": "KataKara Team"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "email": "hello@katakara.com",
+                "contactType": "Customer Service",
+                "availableLanguage": ["English"]
+              },
+              "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "NG",
+                "addressRegion": "Lagos"
+              },
+              "sameAs": [
+                "https://www.facebook.com/katakara",
+                "https://www.twitter.com/katakara",
+                "https://www.instagram.com/katakara",
+                "https://www.linkedin.com/company/katakara"
+              ],
+              "serviceType": "Freelance Marketplace",
+              "knowsAbout": [
+                "Freelance Services",
+                "Web Development",
+                "Graphic Design",
+                "Digital Marketing",
+                "Content Writing",
+                "Software Development"
+              ],
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Freelance Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Web Development",
+                      "description": "Professional web development services"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Graphic Design",
+                      "description": "Creative graphic design solutions"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Digital Marketing",
+                      "description": "Strategic digital marketing campaigns"
+                    }
+                  }
+                ]
+              }
+            })
+          }}
+        />
       </head>
       <body className="antialiased bg-white text-gray-900">
         <Navbar />

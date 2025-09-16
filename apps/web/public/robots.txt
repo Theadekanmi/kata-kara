@@ -1,0 +1,24 @@
+# robots.txt for KataKara
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /jobs
+Allow: /freelancers
+Allow: /about
+Allow: /contact
+Allow: /enterprise
+Allow: /help
+Allow: /security
+
+# Disallow admin and private areas
+Disallow: /admin
+Disallow: /dashboard
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://kata-kara.vercel.app/sitemap.xml
+
+# Crawl-delay (optional, helps with server load)
+Crawl-delay: 1
+

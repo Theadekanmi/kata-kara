@@ -137,10 +137,10 @@ export default function SignupPage() {
   };
 
   return (
-    <div className="min-h-screen flex">
+    <div className="min-h-screen flex flex-col lg:flex-row">
       {/* Left Side - Image */}
-      <div className="hidden md:block relative w-0 flex-1 max-w-md lg:max-w-lg">
-        <div className="h-screen max-h-[80vh] relative overflow-hidden rounded-r-2xl">
+      <div className="hidden lg:block relative w-0 flex-1 max-w-md lg:max-w-lg order-2 lg:order-1">
+        <div className="h-full min-h-[400px] lg:h-screen lg:max-h-[80vh] relative overflow-hidden rounded-r-2xl">
           <Image
             className="absolute inset-0 h-full w-full object-cover"
             src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=800&auto=format&fit=crop"
@@ -159,7 +159,7 @@ export default function SignupPage() {
       </div>
 
       {/* Right Side - Form */}
-      <div className="flex-1 flex flex-col justify-center py-12 px-4 sm:px-6 lg:px-20 xl:px-24">
+      <div className="flex-1 flex flex-col justify-center py-8 lg:py-12 px-4 sm:px-6 lg:px-20 xl:px-24 order-1 lg:order-2">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div>
             <Link href="/" className="flex items-center">
